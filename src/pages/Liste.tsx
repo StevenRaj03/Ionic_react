@@ -12,7 +12,7 @@ export const Liste: React.FC<ContainerProps> = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     async function sendRequest() {
-      fetch('http://localhost:8080/GestionFlotte/avions', {
+      fetch('http://web-service-production.up.railway.app/GestionFlotte/avions', {
       method: "GET" })
       .then((res) => res.json())
       .then((result) => {

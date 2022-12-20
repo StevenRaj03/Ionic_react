@@ -17,7 +17,7 @@ const Authentification = () => {
 
    useEffect(() => {
     async function sendRequest(){
-      fetch('http://localhost:8080/GestionFlotte/login/'+email+'/'+mdp,{
+      fetch('http://web-service-production.up.railway.app/GestionFlotte/login/'+email+'/'+mdp,{
       method: "GET" })
        .then((res) => res.json())
        .then((result) => {

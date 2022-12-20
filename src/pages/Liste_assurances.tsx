@@ -11,7 +11,7 @@ const Liste_assurances: React.FC = () => {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
         async function sendRequest() {
-        fetch('http://localhost:8080/GestionFlotte/assurances/expiration/' + valeur, {
+        fetch('http://web-service-production.up.railway.app/GestionFlotte/assurances/expiration/' + valeur, {
         method: "GET" })
         .then((res) => res.json())
         .then((result) => {

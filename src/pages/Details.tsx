@@ -31,7 +31,7 @@ const avion_marque = urlParams.get('avion_marque');
      console.log("my image: " + image);
    }
    reader.readAsDataURL(f);
-   fetch('http://localhost:8080/GestionFlotte/avions/' + avion_id + '/image/' + image, {
+   fetch('http://web-service-production.up.railway.app/GestionFlotte/avions/' + avion_id + '/image/' + image, {
       method: "PUT" })
       .catch((err) => {
         console.log(err.message);
@@ -44,7 +44,7 @@ export const Details: React.FC = () => {
     //console.log(avion_id);
     useEffect(() => {
         async function sendRequest() {
-        fetch('http://localhost:8080/GestionFlotte/avions/' + avion_id + '/kilometrages', {
+        fetch('http://web-service-production.up.railway.app/GestionFlotte/avions/' + avion_id + '/kilometrages', {
         method: "GET" })
         .then((res) => res.json())
         .then((result) => {
